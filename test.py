@@ -3,6 +3,8 @@ import subprocess
 import errno
 from data import *
 
+os.system('clear')
+
 if not os.path.exists('quran_d'):
     os.makedirs("quran_d") 
 
@@ -38,25 +40,27 @@ print("""
 
                 """)
 
-print("[1] mshary al-afasy")
-inp=input("choose the reader:")
-
-if inp == "1":
-    soura()
-
 print("""
         1.listen
         2.download
-        3.download_all      """)
+        3.download_all      \n\n\n""")
+first_menu=input(">> ")
+if first_menu == "1":
+    os.system('clear')
+    print("      readers name\n\n")
+    print("[+]top readers:")
+    print("[1] mshary al-afasy [2] abdelsamad alqurashy [3] yaser aldosry \n\n\n")
+    inp=input("choose the reader:")
 
-lord=input("choose:")
-
-if lord == "1":
-    sor=input("which sora:")
-    number= str(sor)
-    zero=number.zfill(3)
-    print(zero)
-    subprocess.run(["mplayer",f"https://server8.mp3quran.net/afs/{zero}.mp3"])
+    if inp == "1":
+        os.system('clear')
+        soura()
+        sora = input(">>")
+        if sora == "1":
+            number= str(sora)
+            zero=number.zfill(3)
+            print(zero)
+            subprocess.run(["mplayer",f"https://server8.mp3quran.net/afs/{zero}.mp3"])
 
 if lord == "2":
     sor=input("which sora:")

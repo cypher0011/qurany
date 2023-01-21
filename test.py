@@ -80,6 +80,9 @@ if first_menu == "1":
         subprocess.run(["mplayer",f"https://server11.mp3quran.net/yasser/{zero}.mp3"])
 
 if first_menu == "2":
+    os.system('clear')
+    print("\t\t\t[+]download")
+    soura()
     sor=input("which sora:")
     number= str(sor)
     zero=number.zfill(3)

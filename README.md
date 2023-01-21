@@ -20,5 +20,5 @@ is a holy quran listener for *unix it's work in api from (mp3quran.net)
 + more options rgprase
 + more better gui
 + colorful tool
-
++ open quran from terminal
 

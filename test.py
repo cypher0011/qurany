@@ -33,11 +33,12 @@ print("""
            |===|/
            '---'  
            
-------------------------------------------------
-    >quran project<
-    info:you can listen --- now you can listen only to mshary al-afasy 
-    soon:you can download -- and listen to all readers
+     ~quran project~
+    
+    (this project is waqf for allah)
 
+    update: you can listen to some of famous shaiks 
+    comming: listen to all shaiks - can open quran from terminal - add the arabic language
                 """)
 
 print("""
@@ -60,7 +61,6 @@ if first_menu == "1":
         zero=number.zfill(3)
         print(zero)
         subprocess.run(["mplayer",f"https://server8.mp3quran.net/afs/{zero}.mp3"])
-
     if inp == "2":
         os.system('clear')
         soura()

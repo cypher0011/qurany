@@ -5,6 +5,8 @@ if you have any ideas for me please email me (a05445749993@gmail.com)
 
 use:
 ```bash
+git clonehttps://github.com/cypher0011/qurany.git
+cd qurany
 python3 quran.py
 ```
 

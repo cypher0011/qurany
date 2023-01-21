@@ -5,8 +5,8 @@ from data import *
 
 os.system('clear')
 
-if not os.path.exists('quran_d'):
-    os.makedirs("quran_d") 
+if not os.path.exists('downloads'):
+    os.makedirs("downloads") 
 
 print("""
 
@@ -84,16 +84,16 @@ if first_menu == "2":
     number= str(sor)
     zero=number.zfill(3)
     print(zero)
-    #wget https://server8.mp3quran.net/afs/114.mp3 -P /home/kali/Desktop/quran/quran_d
-    #subprocess.run(["wget",f"https://server8.mp3quran.net/afs/{zero}.mp3", "-P /quran_d"])
-    os.system(f"wget https://server8.mp3quran.net/afs/{zero}.mp3 -P quran_d")
+    #wget https://server8.mp3quran.net/afs/114.mp3 -P /home/kali/Desktop/quran/downloads
+    #subprocess.run(["wget",f"https://server8.mp3quran.net/afs/{zero}.mp3", "-P /downloads"])
+    os.system(f"wget https://server8.mp3quran.net/afs/{zero}.mp3 -P downloads")
 
 if first_menu == "3":
     for number in range(115):
         number = str(number)
         zero=number.zfill(3)
         print(zero)
-        os.system(f"wget https://server8.mp3quran.net/afs/{zero}.mp3 -P quran_d")
+        os.system(f"wget https://server7.mp3quran.net/afs/{zero}.mp3 -P downloads")
 
 
 

@@ -53,8 +53,8 @@ print(f"""
         1.listen
         2.download
         3.download_all      \n\n\n""")
-first_menu=input(">> ")
 try:
+    first_menu=input(">> ")
     if first_menu == "1":
         os.system('clear')
         print("      readers name\n\n")

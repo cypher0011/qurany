@@ -20,12 +20,12 @@ is a holy quran listener for *unix it's work in api from (mp3quran.net)
 + you can download any sora with 3 click
 + you can download all the soar in quran from any reader
 
-### comming:
+### coming:
 + add the arabic language (gui)
 + command line option 
 + top readers in month listening
 + all shaiks name with the first letter
-+ more options rgprase
++ more options argprase
 + more better gui
 + colorful tool
 + open quran from terminal

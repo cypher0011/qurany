@@ -49,20 +49,37 @@ if first_menu == "1":
     os.system('clear')
     print("      readers name\n\n")
     print("[+]top readers:")
-    print("[1] mshary al-afasy [2] abdelsamad alqurashy [3] yaser aldosry \n\n\n")
+    print("[1] mshary al-afasy [2] maher al muaiqly [3] yaser aldosry \n\n\n")
     inp=input("choose the reader:")
 
     if inp == "1":
         os.system('clear')
         soura()
         sora = input(">>")
-        if sora == "1":
-            number= str(sora)
-            zero=number.zfill(3)
-            print(zero)
-            subprocess.run(["mplayer",f"https://server8.mp3quran.net/afs/{zero}.mp3"])
+        number= str(sora)
+        zero=number.zfill(3)
+        print(zero)
+        subprocess.run(["mplayer",f"https://server8.mp3quran.net/afs/{zero}.mp3"])
 
-if lord == "2":
+    if inp == "2":
+        os.system('clear')
+        soura()
+        sora = input(">>")
+        number= str(sora)
+        zero=number.zfill(3)
+        print(zero)
+        subprocess.run(["mplayer",f"https://server8.mp3quran.net/maher/{zero}.mp3"])
+
+    if inp == "3":
+        os.system('clear')
+        soura()
+        sora = input(">>")
+        number= str(sora)
+        zero=number.zfill(3)
+        print(zero)
+        subprocess.run(["mplayer",f"https://server11.mp3quran.net/yasser/{zero}.mp3"])
+
+if first_menu == "2":
     sor=input("which sora:")
     number= str(sor)
     zero=number.zfill(3)
@@ -71,7 +88,7 @@ if lord == "2":
     #subprocess.run(["wget",f"https://server8.mp3quran.net/afs/{zero}.mp3", "-P /quran_d"])
     os.system(f"wget https://server8.mp3quran.net/afs/{zero}.mp3 -P quran_d")
 
-if lord == "3":
+if first_menu == "3":
     for number in range(115):
         number = str(number)
         zero=number.zfill(3)

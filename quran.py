@@ -126,7 +126,7 @@ try:
 
 except KeyboardInterrupt:
     os.system("clear")
-    print("bye")
+    print("👋"+"في امان الله"+"السلام عليكم الرحمة الله وبركاته")
     exit(0)
 
     # import os

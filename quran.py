@@ -3,8 +3,17 @@ import subprocess
 import errno
 from data import *
 
-os.system('clear')
 
+#colors 
+nocolor = "\033[0m"
+black   = "\033[0;30m"
+red     = "\033[0;31m"
+green   = "\033[0;32m"
+yellow  = "\033[0;33m"
+white   = "\033[0;37m"
+
+
+os.system('clear')
 if not os.path.exists('downloads'):
     os.makedirs("downloads") 
 
@@ -40,8 +49,7 @@ print("""
     update: you can listen to some of famous shaiks 
     comming: listen to all shaiks - can open quran from terminal - add the arabic language
                 """)
-
-print("""
+print(f"""
         1.listen
         2.download
         3.download_all      \n\n\n""")

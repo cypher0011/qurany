@@ -13,9 +13,21 @@ yellow = "\033[0;33m"
 white = "\033[0;37m"
 
 
+os.system('''
+if ! which mplayer > /dev/null; then
+   echo "mplayer not found! Install? (y/n) \c"
+   read answer
+   if [ "$answer" = "y" ]
+   then
+      sudo apt-get install mplayer
+   fi
+fi
+''')
+
 os.system("clear")
 if not os.path.exists("downloads"):
     os.makedirs("downloads")
+
 
 print(
     """
@@ -59,12 +71,12 @@ print(
 )
 try:
 
-    if distro.like() == "arch":
-        subprocess.run(["pacman", "-S", "mplayer"])
-    elif distro.like() == "alpine":
-        subprocess.run(["apk", "add", "mplayer"])
-    else:
-        subprocess.run(["apt-get", "install", "mplayer"])
+#    if distro.like() == "arch":
+#        subprocess.run(["pacman", "-S", "mplayer"])
+#    elif distro.like() == "alpine":
+#        subprocess.run(["apk", "add", "mplayer"])
+#    else:
+#        subprocess.run(["apt-get", "install", "mplayer"])
 
     first_menu = input(">> ")
     if first_menu == "1":

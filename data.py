@@ -1,3 +1,4 @@
+import os
 def soura():
     print('''
     1. Al-Fatihah   2. Al-Baqarah     3. Aali Imran      4. An-Nisa 
@@ -30,3 +31,4 @@ def soura():
     109. Al-Kafirun 110. An-Nasr      111. Al-Masad      112. Al-Ikhlas 
     113. Al-Falaq   114. An-Nas
     ''')
+print(os.path.exists('usr/bin/mplayer'))

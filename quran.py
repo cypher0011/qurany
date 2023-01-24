@@ -1,4 +1,5 @@
 import os
+from re import search , MULTILINE
 import subprocess
 import distro
 from data import soura
@@ -12,16 +13,22 @@ green = "\033[0;32m"
 yellow = "\033[0;33m"
 white = "\033[0;37m"
 
-os.system('''
-if ! which mplayer > /dev/null; then
-   echo "mplayer not found! Install? (y/n) \c"
-   read answer
-   if [ "$answer" = "y" ]
-   then
-      sudo apt-get install mplayer
-   fi
-fi
-''')
+# check the distribution name
+with open("/etc/os-release") as f:
+        contents = f.read()
+        
+match = search(r"^ID_LIKE=(.*)$", contents, MULTILINE)
+if match:
+    distribution = match.group(1).strip('"')
+    # check if mplayer is installed
+    if os.path.exists('/usr/bin/mplayer') == False:
+        if distribution == "arch":
+            subprocess.run(["sudo", "pacman", "-S", "--noconfirm", "mplayer"])
+        elif distribution == "alpine":
+            subprocess.run(["sudo", "apk", "add", "mplayer"])
+        else:
+            subprocess.run(["sudo", "apt-get", "install", "-y", "mplayer"])    
+
 
 os.system("clear")
 if not os.path.exists("downloads"):
@@ -68,15 +75,6 @@ print(
         3.download_all      \n\n\n"""
 )
 try:
-    
-
-    #if distro.like() == "arch":
-    #    subprocess.run(["pacman", "-S", "mplayer"])
-    #elif distro.like() == "alpine":
-    #    subprocess.run(["apk", "add", "mplayer"])
-    #else:
-    #    subprocess.run(["apt-get", "install", "mplayer"])
-
     first_menu = input(">> ")
     if first_menu == "1":
         os.system("clear")
